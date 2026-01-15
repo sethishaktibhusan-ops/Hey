@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tongue Animation</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe4e1;
+}
+#mouth {
+    width: 120px;
+    height: 60px;
+    background: black;
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+}
+#tongue {
+    width: 40px;
+    height: 0;
+    background: #ff4d6d;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+    transition: height 0.4s ease;
+}
+</style>
+</head>
+<body>
+
+<div id="mouth">
+    <div id="tongue"></div>
+</div>
+
+<script>
+let out = false;
+document.body.onclick = () => {
+    document.getElementById("tongue").style.height = out ? "0px" : "120px";
+    out = !out;
+};
+</script>
+
+</body>
+</html>
